@@ -1,0 +1,100 @@
+/* Sidebar.css */
+
+.sidebar {
+  width: 250px;
+ 
+  color: white;
+  height: 100vh;
+  position: fixed;  /* Keeps the sidebar fixed on the page */
+  top: 0;
+  left: 0;
+  z-index: 1000;  /* Ensure sidebar is above everything else */
+  padding-top: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #19191a;
+}
+
+.sidebar .admin-link {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-top: 20px;
+  border-top: 1px solid #d351f3;
+  padding-top: 20px;
+}
+
+/* New styles to ensure login page content is below sidebar */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full viewport height */
+  padding-left: 250px;  /* Space for the sidebar */
+  position: relative;
+  z-index: 500;  /* Ensure login content is below sidebar */
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.signup-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #2980b9;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Optional: If you have a separate login form class */
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 500;  /* Ensure it is below the sidebar */
+}
